@@ -5,9 +5,7 @@
 </div>
 
 <!-- Main part -->
-{{# each courses}}
-  Course!
-{{/each}}
+
 <div class="container">
 
     <div class="input-group">
@@ -33,48 +31,27 @@
     <div class="col-md-4">
       <h2>Best utility-point courses</h2>
       <div class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
+        {{# each courses}}
+          <a href="#" class="list-group-item">{{this.title}}</a>
+        {{/each}}
       </div>
     </div>
 
     <div class="col-md-4">
       <h2>Best noted courses</h2>
       <div class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
+        {{# each courses}}
+          <a href="#" class="list-group-item">{{this.title}}</a>
+        {{/each}}
       </div>
     </div>
 
     <div class="col-md-4">
       <h2>Most expensive courses</h2>
       <div class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
-        <a href="#" class="list-group-item">Cras justo odio </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
+        {{# each courses}}
+          <a href="#" class="list-group-item">{{this.title}}</a>
+        {{/each}}
       </div>
     </div>
 
