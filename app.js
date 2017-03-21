@@ -13,6 +13,9 @@ var validator = require('express-validator');
 
 var index = require('./routes/index');
 var user = require('./routes/user');
+var list = require('./routes/list');
+var element = require('./routes/element');
+var review = require('./routes/review');
 
 var app = express();
 
@@ -43,6 +46,9 @@ app.use(function(req, res, next){
 });
 
 app.use('/user', user);
+app.use('/list', list);
+app.use('/element', element);
+app.use('/review', review);
 app.use('/', index);
 
 // catch 404 and forward to error handler

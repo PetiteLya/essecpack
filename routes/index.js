@@ -11,5 +11,20 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* GET contact form */
+router.get('/contact', function(req, res, next){
+	res.render('contact');
+});
+
+/* GET about page */
+router.get('/about', function(req, res, next){
+	res.render('about');
+});
+
+/* GET term of use */
+router.get('/terms', function(req, res, next){
+	res.render('terms');
+});
+
 
 module.exports = router;

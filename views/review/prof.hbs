@@ -1,0 +1,58 @@
+<div class="btn-group" role="group" aria-label="...">
+  <a href="/review/course"><button type="button" class="btn btn-default">Course</button></a>
+  <a href="/review/prof"><button type="button" class="btn btn-default">Professor</button></a>
+  <a href="/review/track"><button type="button" class="btn btn-default">Chair/Track</button></a>
+</div>
+
+<form class="form-horizontal" role="form">
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Course Title </label>
+    <div class="col-md-4 selectContainer">
+      <div class="input-group">
+        <span class="input-group-addon"></span>
+        <select name="course" class="form-control selectpicker" >
+          <option value=" " >Please select your course</option>
+          <option>From database</option>
+        </select>
+      </div>
+    </div>
+</div>
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Professor </label>
+    <div class="col-md-4 selectContainer">
+      <div class="input-group">
+        <span class="input-group-addon"></span>
+        <select name="professor" class="form-control selectpicker" >
+          <option value=" " >Please select your professor</option>
+          <option>From database</option>
+        </select>
+      </div>
+    </div>
+</div>
+
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Note on professor </label>
+    <div class="col-md-4 selectContainer">
+      <div class="input-group">
+        <span class="input-group-addon"></span>
+        <input  name="note-p" class="form-control"  type="number" placeholder="Please give a note from 1 to 10">
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Comment on professor </label>
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <textarea class="form-control" name="comment-p" placeholder="Share with your ESSEC fellows what you think of this professor"></textarea>
+    </div>
+  </div>
+</div>
+
+
+
+
+</form>

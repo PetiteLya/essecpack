@@ -1,6 +1,6 @@
 <!-- User guide -->
 <div class="container">
-  <h1>User Guide</h1>
+  <h1 class="text-center">User Guide</h1>
   <p>This is a website dedicated to ESSEC students. We aim to help you design your cursus at ESSEC according to your personal professional projets.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, aut, nisi! Tempora, earum, optio. In et, iste iure impedit qui esse quaerat, ut cupiditate, quia nam dolorem modi sint? Recusandae.</p>
 </div>
 
@@ -24,7 +24,7 @@
         <input type="text" placeholder="Bid points (median)">
     </div>  
 
-  <button class="btn btn-default" type="button">Advanced Search</button>
+  <button class="btn btn-default" type="button" style="margin-top: 10px;">Advanced Search</button>
 
   <div class="row">
 
@@ -32,7 +32,7 @@
       <h2>Best utility-point courses</h2>
       <div class="list-group">
         {{# each courses}}
-          <a href="#" class="list-group-item">{{this.title}}</a>
+          <a href="/element/course" class="list-group-item">{{this.title}}</a>
         {{/each}}
       </div>
     </div>
