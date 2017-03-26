@@ -5,7 +5,9 @@ var Course = require('../models/course');
 
 
 router.get('/course', function(req, res, next){
-	res.render('list/course');
+	Course.find(function(err, docs){
+  	res.render('list/course', {courses: docs});
+  });
 });
 
 router.get('/prof', function(req, res, next){

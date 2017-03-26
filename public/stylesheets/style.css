@@ -1,3 +1,31 @@
-.pull-right {
-  float: right;
+.white-space {
+	height: 100px
+}
+
+.m-t {
+  margin-top: 10px;
+}
+
+.m-t-0 {
+  margin-top: 0px;
+}
+
+.m-b {
+  margin-bottom: 10px;
+}
+
+.m-b-0 {
+  margin-bottom: 0px;
+}
+
+.panel .shadow {
+  box-shadow: 0 3px 6px 1px rgba(0,0,0,.08), 0 7px 14px 1px rgba(50,50,93,.1);
+}
+
+.lead {
+  font-weight: 300;
+}
+
+.text-muted {
+    color: #9da9b0;
 }

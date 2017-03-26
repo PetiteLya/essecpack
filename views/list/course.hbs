@@ -4,8 +4,10 @@
     <h3 class="panel-title">Course List</h3>
   </div>
   <div class="panel-body">
-    <ul>
-    	<li>List of courses </li>
+  	<ul>
+        {{# each courses}}
+          <a href="/element/course" class="list-group-item">{{this.title}}</a>
+        {{/each}}
     </ul>
   </div>
 </div>

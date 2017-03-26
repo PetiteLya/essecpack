@@ -9,7 +9,7 @@ router.use(csrfProtection);
 
 /* pages that only a logged in user can see*/
 router.get('/profile', isLoggedin, function(req, res, next){
-	res.render('user/profile');
+	res.render('user/profile',{user:req.user});
 });
 
 router.get('/signout', isLoggedin, function(req, res, next){
