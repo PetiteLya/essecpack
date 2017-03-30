@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var Course = require('../models/course');
+var Contact = require('../models/contact');
 
 
 /* GET home page. */
@@ -13,7 +14,19 @@ router.get('/', function(req, res, next) {
 
 /* GET contact form */
 router.get('/contact', function(req, res, next){
-	res.render('contact');
+	res.render('contact',{name: req.name, email: req.email, message: req.message});
+});
+
+/*Save messages sent via contact form*/
+router.post('/contact',function(req, res, next){
+	console.log(req.body.name);
+	new Contact ({
+		name: req.body.name,
+		email: req.body.email,
+		message: req.body.message 
+	}).save();
+	res.redirect('/');
+
 });
 
 /* GET about page */
