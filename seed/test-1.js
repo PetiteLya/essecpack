@@ -9,7 +9,7 @@ var Schema = mongoose.Schema;
 
 var professorSchema = new Schema({
     name: {type: String, required: true},
-    courses:[{type: Schema.ObjectId, ref: 'Course'}] //validation error, can't be recognized as objectID
+    courses:[{type: Schema.ObjectId, ref: 'Course'}]
 });
 
 mongoose.model('Professor', professorSchema);
@@ -25,23 +25,23 @@ var courses = {
     "Advanced Options":"58dbe5c32b0db120badbaaa3",
 }
  
-//connect to our mongo database
+//connect to mongo database
  
 var db = mongoose.connection;
  
-//if we have any errors, show them in console
+//if any errors, show them in console
 db.on('error', function (err) {
  
     console.log('connected ' + err.stack);
  
 });
  
-//when we disconnect from mongo, show this in console
+//when disconnect from mongo, show this in console
 db.on('disconnected', function(){
     console.log('disconnected');
 });
 
-//when we connect to mongo, show this in console
+//when connect to mongo, show this in console
 db.on('connected',function(){
  
     console.log('connected'); 
@@ -51,8 +51,6 @@ db.on('connected',function(){
  		
 		professors[data.name]=professors[data.name]||[];
 		professors[data.name].push(data.courses);
-		
-        //professors.save(); //TypeError: professors.save is not a function
 		
     }) 
  	.on("end", function(){
