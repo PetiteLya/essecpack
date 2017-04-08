@@ -19,7 +19,6 @@ router.get('/contact', function(req, res, next){
 
 /*Save messages sent via contact form*/
 router.post('/contact',function(req, res, next){
-	console.log(req.body.name);
 	new Contact ({
 		name: req.body.name,
 		email: req.body.email,

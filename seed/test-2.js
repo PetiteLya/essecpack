@@ -75,7 +75,7 @@ db.on('connected',function(){
         console.log("done");
     });
     
-
+/*
     csv.fromPath("professors.csv", {headers: true})
     .on("data", function(data){ 
         
@@ -97,7 +97,7 @@ db.on('connected',function(){
         });
 
     })
-
+*/
 
 });
  

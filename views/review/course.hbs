@@ -5,7 +5,7 @@
   <a href="/review/track"><button type="button" class="btn btn-default">Chair/Track</button></a>
 </div>
 
-<form class="well form-horizontal" role="form">
+<form class="well form-horizontal" action="/review/course" method="post">
 
 <div class="form-group"> 
   <label class="col-md-4 control-label">Course Title </label>
@@ -13,8 +13,10 @@
       <div class="input-group">
         <span class="input-group-addon"></span>
         <select name="course" class="form-control selectpicker" >
-          <option value=" " >Please select your course</option>
-          <option>From database</option>
+          <option value=" " >Please select your course </option>
+          {{# each courses}}
+            <option>{{this.title}} </option>
+          {{/each}}
         </select>
       </div>
     </div>
@@ -25,7 +27,7 @@
     <div class="col-md-4 selectContainer">
       <div class="input-group">
         <span class="input-group-addon"></span>
-        <input  name="note-c" class="form-control"  type="number" placeholder="Please give a note from 1 to 10">
+        <input  name="note" class="form-control"  type="number" placeholder="Please give a note from 1 to 10">
       </div>
     </div>
 </div>
@@ -35,7 +37,7 @@
   <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
       <span class="input-group-addon"></span>
-      <textarea class="form-control" name="comment-c" placeholder="Share with your ESSEC fellows what you think of this course"></textarea>
+      <textarea class="form-control" name="comment" placeholder="Share with your ESSEC fellows what you think of this course"></textarea>
     </div>
   </div>
 </div>
