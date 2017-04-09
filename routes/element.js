@@ -21,8 +21,10 @@ router.get('/course/:id', function(req, res, next){
   	});
 });
 
-router.get('/prof', function(req, res, next){
-	res.render('element/prof');
+router.get('/prof/:id', function(req, res, next){
+  Professor.findById(req.params.id, function(err, docs){
+      res.render('element/prof', {professor: docs});
+    });
 });
 
 router.get('/track', function(req, res, next){
